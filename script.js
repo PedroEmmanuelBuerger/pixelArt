@@ -9,6 +9,9 @@ coresDaPaleta2.setAttribute('class', 'color');
 coresDaPaleta3.setAttribute('class', 'color');
 coresDaPaleta4.setAttribute('class', 'color');
 coresDaPaleta1.setAttribute('id', 'black');
+coresDaPaleta2.style.backgroundColor = 'red';
+coresDaPaleta3.style.backgroundColor = 'blue';
+coresDaPaleta4.style.backgroundColor = 'green';
 paletaDeCores.appendChild(coresDaPaleta1);
 paletaDeCores.appendChild(coresDaPaleta2);
 paletaDeCores.appendChild(coresDaPaleta3);
@@ -23,9 +26,9 @@ botaoReset.setAttribute('id', 'button-random-color');
 corpo.appendChild(botaoReset);
 
 function randomizer() {
-  const cor1 = arrayDeCores[Math.floor(Math.random() * 9)];
-  const cor2 = arrayDeCores[Math.floor(Math.random() * 9)];
-  const cor3 = arrayDeCores[Math.floor(Math.random() * 9)];
+  const cor1 = arrayDeCores[Math.floor(Math.random() * 8)];
+  const cor2 = arrayDeCores[Math.floor(Math.random() * 8)];
+  const cor3 = arrayDeCores[Math.floor(Math.random() * 8)];
   coresDaPaleta2.style.backgroundColor = cor1;
   coresDaPaleta3.style.backgroundColor = cor2;
   coresDaPaleta4.style.backgroundColor = cor3;
@@ -36,9 +39,6 @@ botaoReset.addEventListener('click', randomizer);
 
 
 window.onload = function () {
-    coresDaPaleta2.style.backgroundColor = 'red';
-    coresDaPaleta3.style.backgroundColor = 'blue';
-    coresDaPaleta4.style.backgroundColor = 'green';
     const listaDeCores = document.getElementsByClassName('color');
     const cores = JSON.parse(localStorage.getItem('colorPalette'));
     listaDeCores[1].style.backgroundColor = cores[0]
