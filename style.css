@@ -1,4 +1,8 @@
+/* // seção 1 - criando paletas */
 .color {
+    position: relative;
+    left: 855px;
+    top: 100px;
     border: 1px solid black;
     width: 40px;
     height: 40px;
@@ -6,18 +10,35 @@
     margin: 2px;
 }
 
-#corPreta {
+#black {
     background-color: black;
 }
 
-#corVermelha {
+#cor1 {
     background-color: red;
 }
 
-#corAzul {
+#cor2{
     background-color: blue;
 }
 
-#corVerde {
+#cor3 {
     background-color: green;
+}
+
+#title {
+    text-align: center;
+}
+
+
+/* // seção 2 - criando botão */
+
+#button-random-color {
+    position: relative;
+    left: 1060px;
+    top: 55px;
+    padding: 5px;
+    font-size: 20px;
+    width: 250px;
+    background-color: rgb(150, 145, 145)
 }
