@@ -1,0 +1,23 @@
+.color {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 2px;
+}
+
+#corPreta {
+    background-color: black;
+}
+
+#corVermelha {
+    background-color: red;
+}
+
+#corAzul {
+    background-color: blue;
+}
+
+#corVerde {
+    background-color: green;
+}
