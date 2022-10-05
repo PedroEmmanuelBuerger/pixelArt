@@ -9,6 +9,7 @@ coresDaPaleta2.setAttribute('class', 'color');
 coresDaPaleta3.setAttribute('class', 'color');
 coresDaPaleta4.setAttribute('class', 'color');
 coresDaPaleta1.setAttribute('id', 'black');
+coresDaPaleta1.style.backgroundColor = 'black';
 
 coresDaPaleta2.style.backgroundColor = 'red';
 coresDaPaleta3.style.backgroundColor = 'blue';
@@ -97,3 +98,12 @@ localPalete.addEventListener('click', function (evento) {
 )
 
 // seção 5 - pitando o quadro
+
+const localQuadro = document.getElementsByClassName('pixel');
+for (let index4 = 0; index4 <=localQuadro.length -1 ; index4 = index4 + 1){
+localQuadro[index4].addEventListener('click', function(alterarCor){
+alterarCor.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+})}
+
+// seção 6 - retornar cor ao inicio
+

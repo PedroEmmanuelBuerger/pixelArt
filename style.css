@@ -1,6 +1,8 @@
 /* // seção 1 - criando paletas */
 body{
 background-color: rgb(197, 193, 193);
+line-height: 0%;
+background-image: url('5330749.jpg');
 }
 .color {
     position: relative;
@@ -14,7 +16,6 @@ background-color: rgb(197, 193, 193);
 }
 
 #black {
-    background-color: black;
 }
 
 #title {
