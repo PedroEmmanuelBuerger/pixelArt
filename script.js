@@ -4,7 +4,7 @@ const coresDaPaleta1 = document.createElement('div');
 const coresDaPaleta2 = document.createElement('div');
 const coresDaPaleta3 = document.createElement('div');
 const coresDaPaleta4 = document.createElement('div');
-coresDaPaleta1.setAttribute('class', 'color');
+// coresDaPaleta1.setAttribute('class', 'color');
 coresDaPaleta2.setAttribute('class', 'color');
 coresDaPaleta3.setAttribute('class', 'color');
 coresDaPaleta4.setAttribute('class', 'color');
@@ -16,6 +16,8 @@ paletaDeCores.appendChild(coresDaPaleta1);
 paletaDeCores.appendChild(coresDaPaleta2);
 paletaDeCores.appendChild(coresDaPaleta3);
 paletaDeCores.appendChild(coresDaPaleta4);
+const corPreta = document.getElementById('black');
+corPreta.classList.add('color', 'selected');
 
 // seção 2 - criando botão
 const arrayDeCores = ['blue', 'red', 'green', 'gray', 'yellow', 'orange', 'purple', 'pink', 'gold', 'brown', 'coral', 'chocolate', 'cyan', 'hotPink', 'LawnGreen'];
@@ -42,9 +44,9 @@ window.onload = function () {
   const listaDeCores = document.getElementsByClassName('color');
   const cores = JSON.parse(localStorage.getItem('colorPalette'));
   if (cores !== null) {
-    listaDeCores[1].style.backgroundColor = cores[0]
-    listaDeCores[2].style.backgroundColor = cores[1]
-    listaDeCores[3].style.backgroundColor = cores[2]
+    listaDeCores[1].style.backgroundColor = cores[0];
+    listaDeCores[2].style.backgroundColor = cores[1];
+    listaDeCores[3].style.backgroundColor = cores[2];
   }
 };
 
