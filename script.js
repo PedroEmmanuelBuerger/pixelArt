@@ -4,17 +4,21 @@ const coresDaPaleta1 = document.createElement('div');
 const coresDaPaleta2 = document.createElement('div');
 const coresDaPaleta3 = document.createElement('div');
 const coresDaPaleta4 = document.createElement('div');
+
 coresDaPaleta2.setAttribute('class', 'color');
 coresDaPaleta3.setAttribute('class', 'color');
 coresDaPaleta4.setAttribute('class', 'color');
 coresDaPaleta1.setAttribute('id', 'black');
+
 coresDaPaleta2.style.backgroundColor = 'red';
 coresDaPaleta3.style.backgroundColor = 'blue';
 coresDaPaleta4.style.backgroundColor = 'green';
+
 paletaDeCores.appendChild(coresDaPaleta1);
 paletaDeCores.appendChild(coresDaPaleta2);
 paletaDeCores.appendChild(coresDaPaleta3);
 paletaDeCores.appendChild(coresDaPaleta4);
+
 const corPreta = document.getElementById('black');
 corPreta.classList.add('color', 'selected');
 
@@ -84,9 +88,12 @@ quadro();
 const coresAselecionar = document.getElementsByClassName('color');
 const localPalete = document.getElementById('color-palette');
 localPalete.addEventListener('click', function (evento) {
+  if (evento.target != localPalete){
   for (let i = 0; i <= coresAselecionar.length -1; i = i + 1) {
-    coresAselecionar[i].classList.remove('selected')
+    coresAselecionar[i].classList.remove('selected')}
   }
-  evento.target.classList.add('color', 'selected')
+  if (evento.target != localPalete){evento.target.classList.add('color', 'selected')}
 }
 )
+
+// seção 5 - pitando o quadro
