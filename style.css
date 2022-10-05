@@ -20,6 +20,7 @@ background-image: url('5330749.jpg');
 
 #title {
     text-align: center;
+    color: rgb(5, 235, 166);
 }
 
 
@@ -45,7 +46,7 @@ background-image: url('5330749.jpg');
     border: 1px solid black;
     width: 40px;
     height: 40px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     left: 840px;
     top: 150px;
 }

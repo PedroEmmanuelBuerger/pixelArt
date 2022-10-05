@@ -50,52 +50,41 @@ botaoReset.addEventListener('click', randomizer);
 window.onload = function () {
   const listaDeCores = document.getElementsByClassName('color');
   const cores = JSON.parse(localStorage.getItem('colorPalette'));
+  const listaDeBlocos = document.getElementsByClassName('pixel');
+
   if (cores !== null) {
     listaDeCores[1].style.backgroundColor = cores[0];
     listaDeCores[2].style.backgroundColor = cores[1];
     listaDeCores[3].style.backgroundColor = cores[2];
+
+
   }
 };
 
 // seção 3 - retornar cor ao inicio
 
-const botao = document.createElement('button');
-corpo.appendChild(botao);
+const botao = document.getElementById('clear-board');
 botao.innerText = 'Limpar';
-botao.setAttribute('id', 'clear-board');
 botao.addEventListener('click', function(retornarBranco){
 for (let i2 = 0; i2 <=localQuadro.length -1; i2 = i2 + 1){
 localQuadro[i2].style.backgroundColor = 'white'
 }
 })
 
-
 // seção 4 - criando o quadro
 function quadro(valor1) {
-  let quadrados = document.createElement('div');
-  quadrados.setAttribute('id', 'pixel-board')
-  corpo.appendChild(quadrados)
-  container = document.createElement('div')
-  quadrados.appendChild(container)
-
-
-
+  const container = document.getElementById('pixel-board');
   if (valor1 == 5 || valor1 == undefined) {
     for (let index = 0; index < 5; index = index + 1) {
-      let divs = document.createElement('div')
-      container.appendChild(divs)
+      const divs2 = document.createElement('div');
+      container.appendChild(divs2);
       for (let index3 = 0; index3 < 5; index3 = index3 + 1) {
-        let divs = document.createElement('div')
-        divs.setAttribute('class', 'pixel')
-        container.appendChild(divs)
-        divs.style.display = 'inline-block'
+       const divs = document.createElement('div');
+        divs.setAttribute('class', 'pixel');
+        container.appendChild(divs);
+        divs.style.display = 'inline-block';
       }
     }
-  }
-  else for (let index2 = 0; index2 <= valor1 - 1; index2 = index2 + 1) {
-    let divs = document.createElement('div')
-    divs.setAttribute('class', 'pixel')
-    container.appendChild(divs)
   }
 };
 quadro();
@@ -115,10 +104,16 @@ localPalete.addEventListener('click', function (evento) {
 // seção 6 - pitando o quadro
 
 const localQuadro = document.getElementsByClassName('pixel');
+
 for (let index4 = 0; index4 <=localQuadro.length -1 ; index4 = index4 + 1){
 localQuadro[index4].addEventListener('click', function(alterarCor){
 alterarCor.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
-})}
-
-
+}
+)}
 // seção 7 - salvando o quadro
+let valor3 = ''
+for (let rep = 0; rep <=1; rep = rep + 1){
+document.querySelector('.pixel')
+valor3 = document.querySelector('.pixel').style.backgroundColor
+console.log(valor3)
+};
