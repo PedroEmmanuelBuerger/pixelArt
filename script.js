@@ -56,10 +56,23 @@ window.onload = function () {
   }
 };
 
-// seção 3 - criando o quadro
+// seção 3 - retornar cor ao inicio
+
+const botao = document.createElement('button');
+corpo.appendChild(botao);
+botao.innerText = 'Limpar';
+botao.setAttribute('id', 'clear-board');
+botao.addEventListener('click', function(retornarBranco){
+for (let i2 = 0; i2 <=localQuadro.length -1; i2 = i2 + 1){
+localQuadro[i2].style.backgroundColor = 'white'
+}
+})
+
+
+// seção 4 - criando o quadro
 function quadro(valor1) {
-  let quadrados = document.createElement('section')
-  corpo.appendChild(quadrados);
+  let quadrados = document.createElement('section');
+  corpo.appendChild(quadrados)
   container = document.createElement('div')
   quadrados.appendChild(container)
   container.setAttribute('id', 'pixel-board')
@@ -85,7 +98,7 @@ function quadro(valor1) {
 };
 quadro();
 
-// seção 4 - selecionando cor
+// seção 5 - selecionando cor
 const coresAselecionar = document.getElementsByClassName('color');
 const localPalete = document.getElementById('color-palette');
 localPalete.addEventListener('click', function (evento) {
@@ -97,13 +110,11 @@ localPalete.addEventListener('click', function (evento) {
 }
 )
 
-// seção 5 - pitando o quadro
+// seção 6 - pitando o quadro
 
 const localQuadro = document.getElementsByClassName('pixel');
 for (let index4 = 0; index4 <=localQuadro.length -1 ; index4 = index4 + 1){
 localQuadro[index4].addEventListener('click', function(alterarCor){
 alterarCor.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 })}
-
-// seção 6 - retornar cor ao inicio
 

@@ -49,3 +49,13 @@ background-image: url('5330749.jpg');
     left: 840px;
     top: 150px;
 }
+
+
+/* seçao 4 - botao reset */
+#clear-board{
+position: relative;
+left: 905px;
+top: 130px;
+width: 90px;
+font-size: 15px;
+}
