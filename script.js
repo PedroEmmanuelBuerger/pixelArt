@@ -29,7 +29,8 @@ const corpo = document.body;
 const botaoReset = document.createElement('button');
 botaoReset.innerHTML = 'Cores aleatórias';
 botaoReset.setAttribute('id', 'button-random-color');
-corpo.appendChild(botaoReset);
+const cabecalho = document.getElementById('cabecalho');
+cabecalho.appendChild(botaoReset);
 
 function randomizer() {
   const cor1 = arrayDeCores[Math.floor(Math.random() * 15)];
@@ -71,11 +72,12 @@ localQuadro[i2].style.backgroundColor = 'white'
 
 // seção 4 - criando o quadro
 function quadro(valor1) {
-  let quadrados = document.createElement('section');
+  let quadrados = document.createElement('div');
+  quadrados.setAttribute('id', 'pixel-board')
   corpo.appendChild(quadrados)
   container = document.createElement('div')
   quadrados.appendChild(container)
-  container.setAttribute('id', 'pixel-board')
+
 
 
   if (valor1 == 5 || valor1 == undefined) {
@@ -118,3 +120,5 @@ localQuadro[index4].addEventListener('click', function(alterarCor){
 alterarCor.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 })}
 
+
+// seção 7 - salvando o quadro
