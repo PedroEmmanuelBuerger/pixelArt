@@ -18,7 +18,7 @@ paletaDeCores.appendChild(coresDaPaleta3);
 paletaDeCores.appendChild(coresDaPaleta4);
 
 // seção 2 - criando botão
-const arrayDeCores = ['blue', 'red', 'green', 'gray', 'yellow', 'orange', 'purple', 'pink'];
+const arrayDeCores = ['blue', 'red', 'green', 'gray', 'yellow', 'orange', 'purple', 'pink', 'gold', 'brown', 'coral', 'chocolate', 'cyan', 'hotPink', 'LawnGreen'];
 const corpo = document.body;
 const botaoReset = document.createElement('button');
 botaoReset.innerHTML = 'Cores aleatórias';
@@ -26,9 +26,9 @@ botaoReset.setAttribute('id', 'button-random-color');
 corpo.appendChild(botaoReset);
 
 function randomizer() {
-  const cor1 = arrayDeCores[Math.floor(Math.random() * 8)];
-  const cor2 = arrayDeCores[Math.floor(Math.random() * 8)];
-  const cor3 = arrayDeCores[Math.floor(Math.random() * 8)];
+  const cor1 = arrayDeCores[Math.floor(Math.random() * 15)];
+  const cor2 = arrayDeCores[Math.floor(Math.random() * 15)];
+  const cor3 = arrayDeCores[Math.floor(Math.random() * 15)];
   coresDaPaleta2.style.backgroundColor = cor1;
   coresDaPaleta3.style.backgroundColor = cor2;
   coresDaPaleta4.style.backgroundColor = cor3;
@@ -39,9 +39,40 @@ botaoReset.addEventListener('click', randomizer);
 
 
 window.onload = function () {
-    const listaDeCores = document.getElementsByClassName('color');
-    const cores = JSON.parse(localStorage.getItem('colorPalette'));
+  const listaDeCores = document.getElementsByClassName('color');
+  const cores = JSON.parse(localStorage.getItem('colorPalette'));
+  if (cores !== null) {
     listaDeCores[1].style.backgroundColor = cores[0]
     listaDeCores[2].style.backgroundColor = cores[1]
     listaDeCores[3].style.backgroundColor = cores[2]
+  }
 };
+
+// seção 3 - criando o quadro
+function quadro(valor1){
+let quadrados = document.createElement('section')
+corpo.appendChild(quadrados);
+container = document.createElement('div')
+quadrados.appendChild(container)
+container.setAttribute('id', 'pixel-board')
+
+
+if (valor1 == 5 || valor1 == undefined){
+for (let index = 0; index <5 ; index = index + 1){
+let divs = document.createElement('div')
+container.appendChild(divs)
+for( let index3 = 0; index3 < 5; index3 = index3 + 1){
+  let divs = document.createElement('div')
+  divs.setAttribute('class', 'pixel')
+  container.appendChild(divs)
+  divs.style.display = 'inline-block'
+}
+}
+}
+else for (let index2 = 0; index2 <=valor1 -1; index2 = index2 + 1){
+  let divs = document.createElement('div')
+  divs.setAttribute('class', 'pixel')
+  container.appendChild(divs)
+}
+};
+quadro();
