@@ -17,7 +17,6 @@ background-image: url('5330749.jpg');
     }
 
     #pixel-board{
-
     }
     
 .color {
@@ -45,11 +44,11 @@ background-image: url('5330749.jpg');
 #button-random-color {
     position: relative;
     left: 1060px;
-    top: 55px;
+    top: 140px;
     padding: 5px;
     font-size: 20px;
     width: 250px;
-    background-color: rgb(150, 145, 145)
+    background-color: rgba(240, 178, 121, 0.74)
 }
 
 /* seção 3 - quadro */
