@@ -57,6 +57,16 @@ window.onload = function () {
     listaDeCores[2].style.backgroundColor = cores[1];
     listaDeCores[3].style.backgroundColor = cores[2];
   }
+  const salvandoQuadrados = JSON.parse(localStorage.getItem('pixelBoard'));
+  const localQuadro2 = document.querySelectorAll('.pixel');
+  function load(){
+  if (salvandoQuadrados !== null){
+  for (let index5 = 0; index5 < localQuadro2.length; index5 = index5 + 1){
+  localQuadro2[index5].style.backgroundColor = salvandoQuadrados[index5];
+  }
+  }
+}
+load();
 };
 
 // seção 3 - retornar cor ao inicio
@@ -65,7 +75,8 @@ botao.addEventListener('click', function(retornarBranco){
 for (let i2 = 0; i2 <=localQuadro.length -1; i2 = i2 + 1){
 localQuadro[i2].style.backgroundColor = 'white'
 }
-})
+salvarQuadro()}
+)
 
 // seção 4 - criando o quadro
 function quadro(valor1) {
@@ -98,21 +109,23 @@ localPalete.addEventListener('click', function (evento) {
 }
 )
 
-// seção 6 - pitando o quadro
 
+// seção 6 - salvando o quadro
 const localQuadro = document.getElementsByClassName('pixel');
+const selecaopixel = document.getElementsByClassName('pixel');
+function salvarQuadro (){
+const arraydebloco = [];
+for (let i = 0; i <= localQuadro.length -1; i = i + 1){
+arraydebloco.push(selecaopixel[i].style.backgroundColor)
+}
+localStorage.setItem('pixelBoard', JSON.stringify(arraydebloco))
+};
+
+// seção 7 - pintar
 
 for (let index4 = 0; index4 <=localQuadro.length -1 ; index4 = index4 + 1){
 localQuadro[index4].addEventListener('click', function(alterarCor){
 alterarCor.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+salvarQuadro()
 }
-)}
-// seção 7 - salvando o quadro
-const selecaopixel = document.getElementsByClassName('pixel');
-const arraydebloco = [];
-function teste (){
-for (let i = 0; i <= localQuadro.length -1; i = i + 1){
-arraydebloco.push(selecaopixel[i].style.backgroundColor)
-}
-console.log(arraydebloco);}
-teste()
+)};
