@@ -4,6 +4,22 @@ background-color: rgb(197, 193, 193);
 line-height: 0%;
 background-image: url('5330749.jpg');
 }
+
+#palette-color{
+
+}
+
+#clear-board{
+    position: relative;
+    left: 905px;
+    top: 130px;
+    width: 90px;
+    font-size: 15px;
+    }
+
+    #pixel-board{
+
+    }
 .color {
     position: relative;
     left: 855px;
@@ -37,9 +53,7 @@ background-image: url('5330749.jpg');
 }
 
 /* seção 3 - quadro */
-#pixel-board{
 
-}
 
 .pixel{
    position: relative;
@@ -53,10 +67,3 @@ background-image: url('5330749.jpg');
 
 
 /* seçao 4 - botao reset */
-#clear-board{
-position: relative;
-left: 905px;
-top: 130px;
-width: 90px;
-font-size: 15px;
-}

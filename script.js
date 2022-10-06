@@ -62,9 +62,7 @@ window.onload = function () {
 };
 
 // seção 3 - retornar cor ao inicio
-
 const botao = document.getElementById('clear-board');
-botao.innerText = 'Limpar';
 botao.addEventListener('click', function(retornarBranco){
 for (let i2 = 0; i2 <=localQuadro.length -1; i2 = i2 + 1){
 localQuadro[i2].style.backgroundColor = 'white'
@@ -80,6 +78,7 @@ function quadro(valor1) {
       container.appendChild(divs2);
       for (let index3 = 0; index3 < 5; index3 = index3 + 1) {
        const divs = document.createElement('div');
+       divs.style.backgroundColor = 'white';
         divs.setAttribute('class', 'pixel');
         container.appendChild(divs);
         divs.style.display = 'inline-block';
@@ -111,9 +110,11 @@ alterarCor.target.style.backgroundColor = document.querySelector('.selected').st
 }
 )}
 // seção 7 - salvando o quadro
-let valor3 = ''
-for (let rep = 0; rep <=1; rep = rep + 1){
-document.querySelector('.pixel')
-valor3 = document.querySelector('.pixel').style.backgroundColor
-console.log(valor3)
-};
+const selecaopixel = document.getElementsByClassName('pixel');
+const arraydebloco = [];
+function teste (){
+for (let i = 0; i <= localQuadro.length -1; i = i + 1){
+arraydebloco.push(selecaopixel[i].style.backgroundColor)
+}
+console.log(arraydebloco);}
+teste()
