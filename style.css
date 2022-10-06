@@ -28,6 +28,7 @@ background-image: url('5330749.jpg');
     height: 40px;
     display: inline-block;
     margin: 2px;
+    border-radius: 50%;
 }
 
 #black {

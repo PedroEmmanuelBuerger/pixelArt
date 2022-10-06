@@ -25,7 +25,6 @@ corPreta.classList.add('color', 'selected');
 
 // seção 2 - criando botão
 const arrayDeCores = ['blue', 'red', 'green', 'gray', 'yellow', 'orange', 'purple', 'pink', 'gold', 'brown', 'coral', 'chocolate', 'cyan', 'hotPink', 'LawnGreen'];
-const corpo = document.body;
 const botaoReset = document.createElement('button');
 botaoReset.innerHTML = 'Cores aleatórias';
 botaoReset.setAttribute('id', 'button-random-color');
@@ -46,12 +45,9 @@ function randomizer() {
 }
 botaoReset.addEventListener('click', randomizer);
 
-
 window.onload = function () {
   const listaDeCores = document.getElementsByClassName('color');
   const cores = JSON.parse(localStorage.getItem('colorPalette'));
-  const listaDeBlocos = document.getElementsByClassName('pixel');
-
   if (cores !== null) {
     listaDeCores[1].style.backgroundColor = cores[0];
     listaDeCores[2].style.backgroundColor = cores[1];
@@ -60,7 +56,7 @@ window.onload = function () {
   const salvandoQuadrados = JSON.parse(localStorage.getItem('pixelBoard'));
   const localQuadro2 = document.querySelectorAll('.pixel');
   function load(){
-  if (salvandoQuadrados !== null){
+    if (salvandoQuadrados !== null){
   for (let index5 = 0; index5 < localQuadro2.length; index5 = index5 + 1){
   localQuadro2[index5].style.backgroundColor = salvandoQuadrados[index5];
   }
@@ -71,7 +67,7 @@ load();
 
 // seção 3 - retornar cor ao inicio
 const botao = document.getElementById('clear-board');
-botao.addEventListener('click', function(retornarBranco){
+botao.addEventListener('click', function (retornarBranco){
 for (let i2 = 0; i2 <=localQuadro.length -1; i2 = i2 + 1){
 localQuadro[i2].style.backgroundColor = 'white'
 }
