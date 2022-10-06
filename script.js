@@ -56,8 +56,6 @@ window.onload = function () {
     listaDeCores[1].style.backgroundColor = cores[0];
     listaDeCores[2].style.backgroundColor = cores[1];
     listaDeCores[3].style.backgroundColor = cores[2];
-
-
   }
 };
 

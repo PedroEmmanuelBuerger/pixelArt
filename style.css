@@ -10,9 +10,8 @@ background-image: url('5330749.jpg');
 }
 
 #clear-board{
-    position: relative;
-    left: 905px;
-    top: 130px;
+    margin-left: 900px;
+    top: 150px;
     width: 90px;
     font-size: 15px;
     }
@@ -20,6 +19,7 @@ background-image: url('5330749.jpg');
     #pixel-board{
 
     }
+    
 .color {
     position: relative;
     left: 855px;
