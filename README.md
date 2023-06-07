@@ -7,7 +7,7 @@ O projeto possui as seguintes funcionalidades:
 - Criação de arte em pixel: os usuários podem selecionar cores e pintar pixels individuais para criar desenhos pixelados.
 - Salvar e carregar desenhos: os usuários podem salvar seus desenhos em arquivos e carregá-los posteriormente para continuar a edição.
 - salvar paleta de cores: pode ser randomizado as cores da paleta, a qual são salvas no navegador.
-- 
+
 ## Tecnologias Utilizadas
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
