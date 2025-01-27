@@ -1,30 +1,27 @@
 # PixelArt
-O PixelArt é um projeto desenvolvido com o objetivo de criar uma ferramenta online para criação de arte em pixel. Com esta aplicação, os usuários podem criar desenhos pixelados e expressar sua criatividade através dessa forma de arte única.
 
-## Funcionalidades
-O projeto possui as seguintes funcionalidades:
+PixelArt is a project developed with the aim of creating an online tool for pixel art creation. With this application, users can create pixelated drawings and express their creativity through this unique form of art.
 
-- Criação de arte em pixel: os usuários podem selecionar cores e pintar pixels individuais para criar desenhos pixelados.
-- Salvar e carregar desenhos: os usuários podem salvar seus desenhos em arquivos e carregá-los posteriormente para continuar a edição.
-- salvar paleta de cores: pode ser randomizado as cores da paleta, a qual são salvas no navegador.
+## Features
 
-## Tecnologias Utilizadas
-O projeto foi desenvolvido utilizando as seguintes tecnologias:
+The project includes the following features:
 
-- HTML
-- CSS
-- JavaScript
+- **Pixel art creation**: users can select colors and paint individual pixels to create pixelated drawings.
+- **Save and load drawings**: users can save their drawings in files and load them later to continue editing.
+- **Save color palette**: the color palette can be randomized, and it is saved in the browser.
 
-## Instalação
-Para utilizar o PixelArt:
+## Technologies Used
 
-1. clone o repositório
-git@github.com:PedroEmmanuelBuerger/project-pixelArt.git
-2. rode as dependencias: npm install
-3. Abra uma pagina html com a extensão live server no arquivo html da aplicação.
+The project was developed using the following technologies:
 
-## Principais Aprendizados
-Durante o desenvolvimento deste projeto, foram explorados conceitos de manipulação do DOM (Document Object Model) com JavaScript, estilização de elementos com CSS e interatividade através de eventos. Também foi uma oportunidade para praticar habilidades de lógica de programação e criatividade na criação de arte em pixel.
+- **HTML**
+- **CSS**
+- **JavaScript**
 
-## Conclusão
-O PixelArt oferece aos usuários uma plataforma divertida e intuitiva para criar desenhos pixelados. É uma excelente ferramenta para artistas digitais, entusiastas de pixel art e qualquer pessoa interessada em explorar essa forma de expressão artística. Desperte sua criatividade e comece a criar suas próprias obras de arte em pixel com o PixelArt!
+## Key Learnings
+
+During the development of this project, concepts of DOM (Document Object Model) manipulation with JavaScript, element styling with CSS, and interactivity through events were explored. It was also an opportunity to practice programming logic skills and creativity in creating pixel art.
+
+## Conclusion
+
+PixelArt provides users with a fun and intuitive platform to create pixelated drawings. It is an excellent tool for digital artists, pixel art enthusiasts, and anyone interested in exploring this form of artistic expression. Unleash your creativity and start creating your own pixel art masterpieces with PixelArt!
